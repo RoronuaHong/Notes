@@ -32,3 +32,11 @@ function error() {
 window.onerror = (message, source, linen, colno, error) => {
   console.log('js执行异常: ', message, source, linen, colno, error)
 }
+
+
+// 3. promise错误
+new Promise((resolve, reject) => {
+  reject('Promise Error')
+}).catch(err => {
+  console.log(err)
+})
